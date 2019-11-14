@@ -77,7 +77,7 @@ class Game extends React.Component {
 
     return (
       <div>
-        <div className="game-board p-2 bg-success">
+        <div className="game-board p-2 bg-success rounded">
           <Board 
             squares={current.squares}
             onClick={ (i) => { this.handleClick(i) } }
