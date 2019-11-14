@@ -53,8 +53,8 @@ class Game extends React.Component {
     const history = this.state.history;
     const current = history[this.state.step];
     const winner = calculateWinner(current.squares);
-    const backBtn = (this.state.step !== 0) ? <button onClick={ () => this.jumpTo(this.state.step - 1) }> &larr; </button> : null;
-    const forwardBtn = (this.state.step < history.length - 1) ? <button onClick={ () => this.jumpTo(this.state.step + 1) }> &rarr; </button> : null;
+    const backBtn = (this.state.step !== 0) ? <button className="font-weight-bold small rounded btn btn-warning" onClick={ () => this.jumpTo(this.state.step - 1) }> &larr; </button> : null;
+    const forwardBtn = (this.state.step < history.length - 1) ? <button className="font-weight-bold small rounded btn btn-warning" onClick={ () => this.jumpTo(this.state.step + 1) }> &rarr; </button> : null;
     let status, str;
     let EmptySquare = current.squares.filter(x => x !== null).length;
 
